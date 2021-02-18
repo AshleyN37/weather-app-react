@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import SearchEngine from "./SearchEngine";
 import TodaysWeather from "./TodaysWeather";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
