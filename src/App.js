@@ -10,6 +10,10 @@ function App() {
       <SearchEngine />
       <h1 className="current-city">Washington D.C.</h1>
       <TodaysWeather />
+      <p class="open-source">
+            <a href="https://github.com/AshleyN37/weather-app-react" target="blank">Open-source code</a>, by Ashley Ness
+    
+        </p>
     </div>
   );
 }
