@@ -48,6 +48,7 @@ export default function SearchEngine() {
         />
 
         <input type="submit" value="Search" className="btn btn-primary" />
+        <input type="button" value="Current Location" class="btn btn-secondary" />
       </form>
       {message}
     </div>

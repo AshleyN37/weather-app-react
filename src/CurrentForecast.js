@@ -9,7 +9,14 @@ export default function CurrentForecast() {
             alt="partly cloudy"
             className="WeatherIcon"
           />
-          <div className="CurrentTemperature">37 °F | °C </div>
+          <div className="CurrentTemperature">37 <sup>
+            <a href="#" id="farenheit" className="active">
+                        °F 
+                </a> | 
+                <a href="#" id="celsius">
+                    °C
+                </a>
+            </sup>  </div>
         </div>
   );
 }
