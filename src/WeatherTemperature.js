@@ -12,38 +12,36 @@ export default function WeatherTemperature(props) {
         event.preventDefault();
         setUnit("fahrenheit");
     }
-
-    function celsiusTemperature() {
-    return (props.fahrenheit - 32) * 5/9;
-    }
-
+    
     if (unit === "fahrenheit") {
         return (
-        <div className="WeatherTemperature">
-            <span className="temperature">
-                {Math.round(props.fahrenheit)}
-            </span>
-            <span className="unit">
-                °F | {" "}
-                <a href="/" onClick={showCelsius}>
-                    °C
-                </a>
-            </span>
-        </div>
-    )
-    } else {
+            <div className="WeatherTemperature">
+                <span className="temperature">
+                    {Math.round(props.fahrenheit)}
+                </span>
+                <span className="unit">
+                    °F | {" "}
+                    <a href="/" onClick={showCelsius}>
+                        °C
+                    </a>
+                </span>
+            </div>
+            )
+        } else {
+    let celsiusTemperature = (props.fahrenheit - 32) * 5/9;
+            
         return (
-        <div className="WeatherTemperature">
-            <span className="temperature">
-                {Math.round(celsiusTemperature)}
-            </span>
-            <span className="unit">
-                <a href="/" onClick={showFahrenheit}>
-                    °F
-                </a>
-                | °C
-            </span>
-        </div>
-        );
-    }
+            <div className="WeatherTemperature">
+                <span className="temperature">
+                    {Math.round(celsiusTemperature)}
+                    </span>
+                    <span className="unit">
+                        <a href="/" onClick={showFahrenheit}>
+                            °F
+                        </a>
+                        | °C
+                    </span>
+                </div>
+                );
+            }
 }

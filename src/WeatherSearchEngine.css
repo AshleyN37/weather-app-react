@@ -4,13 +4,19 @@
 }
 
 .WeatherIcon {
-  width: 95px;
+  width: 100px;
   display: block;
   margin: 0 auto;
 }
 
 .WeatherTemperature {
   text-align: center;
-  font-size: 35px;
-  padding-bottom: 45px;
+  font-size: 50px;
+  padding-bottom: 35px;
+}
+.unit {
+  font-size: 20px;
+  position: relative;
+  line-height: 1;
+  top: -20px;
 }
