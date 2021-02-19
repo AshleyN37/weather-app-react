@@ -3,9 +3,19 @@ import React from "react";
 
 export default function WeatherForecastPreview(props) {
     function hours() {
+        let days = [
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday"];
+
         let date = new Date(props.data.dt * 1000);
+        let day = days[date.getDay()];
         let hours = date.getHours();
-        return `${hours}:00`
+        return `${day} ${hours}:00`
     }
 
     return (
@@ -16,3 +26,8 @@ export default function WeatherForecastPreview(props) {
         </div>
     )
 }
+
+
+// make current location button work
+// format search form
+// format todays forecast area to be a list and add spacing
