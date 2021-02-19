@@ -14,12 +14,11 @@ function handleResponse(response) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
-      description: response.data.weather[0].main,
+      description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
-      weatherIcon: "https://ssl.gstatic.com/onebox/weather/64/snow_s_cloudy.png"
-
+      weatherIcon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
   }
 
