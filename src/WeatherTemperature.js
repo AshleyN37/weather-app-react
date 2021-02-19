@@ -45,3 +45,7 @@ export default function WeatherTemperature(props) {
                 );
             }
 }
+
+/* Add a way to convert feels like temp and mph to km/h
+Add forecast
+*/

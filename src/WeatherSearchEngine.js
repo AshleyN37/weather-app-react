@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherSearchEngine.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast"
 
 export default function WeatherSearchEngine(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
 function handleResponse(response) {
-  console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -59,6 +59,7 @@ function handleResponse(response) {
         <input type="button" value="Current Location" class="btn btn-secondary" />
       </form>
       <WeatherInfo data={weatherData} />
+      <WeatherForecast city={weatherData.city} />
   
       </div>
   );

@@ -26,6 +26,7 @@ export default function WeatherData(props) {
                       </div>
                       </div>
                       <div className="col-3 FeelsHumWind">
+                        
                         <div className="FeelsLike">
                           Feels Like: {Math.round(props.data.feelsLike)}°
                           </div>
