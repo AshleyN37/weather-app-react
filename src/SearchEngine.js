@@ -2,14 +2,49 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function SearchEngine() {
+  const [ready, setReady] = useState(false);
   const [message, setMessage] = useState("");
   const [city, setCity] = useState("");
+  const [temperature, setTemperature] = useState(null);
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  
+
+  function handleResponse(response) {
+    setTemperature(response.data,main.temp);
+    setReady(true);
+  }
+
+  
+
+
+  if (ready) {
+    return (
+    <div className="Form">
+      <form className="search-form">
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          autocomplete="off"
+          autofocus="on"
+          className="form-control"
+          id="search-input"
+          onChange={updateCity}
+        />
+
+        <input type="submit" value="Search" className="btn btn-primary" />
+        <input type="button" value="Current Location" class="btn btn-secondary" />
+      </form>
+      {message}
+    </div>
+  );
+
+  } else {
     let apiKey = "5cb1aa65264597e34c41305199c5cf9e";
+    let city = "Washington, D.C." 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(showWeather);
+    axios.get(url).then(handleResponse);
+
+    return "Loading"
   }
 
   function updateCity(event) {
@@ -17,6 +52,12 @@ export default function SearchEngine() {
     setCity(event.target.value);
   }
 
+
+
+
+
+
+  
   function showWeather(response) {
     setMessage(
       <ul>
@@ -34,23 +75,5 @@ export default function SearchEngine() {
     );
   }
 
-  return (
-    <div className="Form">
-      <form className="search-form" onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          autocomplete="off"
-          autofocus="on"
-          className="form-control"
-          id="search-input"
-          onChange={updateCity}
-        />
-
-        <input type="submit" value="Search" className="btn btn-primary" />
-        <input type="button" value="Current Location" class="btn btn-secondary" />
-      </form>
-      {message}
-    </div>
-  );
+  
 }
