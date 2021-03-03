@@ -43,8 +43,13 @@ function handleResponse(response) {
 
   if (weatherData.ready) {
     return (
-    <div className="Form">
+    <div className="Form container">
+
       <form className="search-form" onSubmit={handleSubmit}>
+      <div className="row">
+      <div className="col-sm-9">
+
+
         <input
           type="search"
           placeholder="Enter a city..."
@@ -53,10 +58,14 @@ function handleResponse(response) {
           className="form-control"
           id="search-input"
           onChange={handleCity}
-        />
+          />
+          </div>
+
 
         <input type="submit" value="Search" className="btn btn-primary" />
         <input type="button" value="Current Location" class="btn btn-secondary" />
+          </div>
+
       </form>
       <WeatherInfo data={weatherData} />
       <WeatherForecast city={weatherData.city} />

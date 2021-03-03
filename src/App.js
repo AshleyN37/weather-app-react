@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       
       <WeatherSearchEngine defaultCity="Washington, D.C."/>
       <p class="open-source">
