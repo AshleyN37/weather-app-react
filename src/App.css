@@ -1,6 +1,21 @@
 .App {
+  background: linear-gradient(
+    178.1deg,
+    rgb(60, 55, 106) 8.5%,
+    rgb(23, 20, 69) 82.4%
+  );
+  /* 
+  background: radial-gradient(
+    780px at 37.8% 100.3%,
+    rgb(19, 55, 115) 2.2%,
+    rgb(32, 7, 80) 20.2%,
+    rgb(27, 88, 111) 58.6%,
+    rgb(115, 88, 44) 75%,
+    rgb(99, 19, 90) 89.6%,
+    rgb(12, 51, 76) 96.1%
+  );
   background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-  /*background-image: linear-gradient(45deg, #455995, #4f5977, #3f475f, #202945); */
+  */
   margin: 10px auto;
   padding: 30px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 7px 7px 12px;
