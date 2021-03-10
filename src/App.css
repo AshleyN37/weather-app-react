@@ -4,18 +4,7 @@
     rgb(60, 55, 106) 8.5%,
     rgb(23, 20, 69) 82.4%
   );
-  /* 
-  background: radial-gradient(
-    780px at 37.8% 100.3%,
-    rgb(19, 55, 115) 2.2%,
-    rgb(32, 7, 80) 20.2%,
-    rgb(27, 88, 111) 58.6%,
-    rgb(115, 88, 44) 75%,
-    rgb(99, 19, 90) 89.6%,
-    rgb(12, 51, 76) 96.1%
-  );
-  background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-  */
+
   margin: 10px auto;
   padding: 30px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 7px 7px 12px;
@@ -25,42 +14,13 @@
   width: 70%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 576px) {
+  .App .CurrentCity {
+    font-size: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.App .current-city {
+.App .CurrentCity {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
