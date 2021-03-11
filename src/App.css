@@ -14,12 +14,6 @@
   width: 70%;
 }
 
-@media (max-width: 576px) {
-  .App .CurrentCity {
-    font-size: 10px;
-  }
-}
-
 .App .CurrentCity {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -28,4 +22,9 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 70px;
+}
+@media (max-width: 576px) {
+  .App .CurrentCity {
+    font-size: 30px;
+  }
 }
