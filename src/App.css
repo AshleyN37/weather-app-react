@@ -23,7 +23,7 @@
   font-weight: 600;
   line-height: 70px;
 }
-@media (max-width: 576px) {
+.App @media (max-width: 576px) {
   .App .CurrentCity {
     font-size: 30px;
   }

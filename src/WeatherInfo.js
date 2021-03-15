@@ -8,7 +8,7 @@ export default function WeatherData(props) {
     <div className="WeatherData">
       <h1 className="CurrentCity">{props.data.city}</h1>
       <div className="row">
-      <div className="col">
+      <div className="col-md-6">
 
       <img src={props.data.weatherIcon} alt={props.data.description} className="WeatherIcon" />
       
@@ -18,17 +18,16 @@ export default function WeatherData(props) {
                   </div>
             
             
-                <div className="TodaysWeather col">
+                <div className="TodaysWeather col-md-6">
                   <div>
                     <FormattedDate date={props.data.date} />
                     </div>
                     <div className="WeatherDescription text-capitalize">
                       {props.data.description}
                       </div>
-                      </div>
+                    
 
 
-                      <div className="col FeelsHumWind">
                         <div className="FeelsLike">
                           Feels Like: {Math.round(props.data.feelsLike)}°
                           </div>

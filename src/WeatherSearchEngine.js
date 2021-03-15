@@ -63,7 +63,6 @@ function handleResponse(response) {
 
 
         <input type="submit" value="Search" className="btn btn-primary" />
-        <input type="button" value="Current Location" class="btn btn-secondary" />
           </div>
 
       </form>

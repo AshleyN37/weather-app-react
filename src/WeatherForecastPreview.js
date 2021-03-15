@@ -14,8 +14,7 @@ export default function WeatherForecastPreview(props) {
 
         let date = new Date(props.data.dt * 1000);
         let day = days[date.getDay()];
-        let hours = date.getHours();
-        return `${day} ${hours}:00`
+        return `${day}`
     }
 
     return (
